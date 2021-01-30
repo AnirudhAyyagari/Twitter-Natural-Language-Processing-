@@ -1,5 +1,5 @@
+#Initial text preprocessing
 def clean(text):
-    #performing lowercase 
     text=re.sub(r'(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))','',text, flags=re.MULTILINE)
     text=re.sub(r'#','',text) #removal of Hastags
     text=re.sub(r'RT[\s]+','', text) #Removal of retweets
